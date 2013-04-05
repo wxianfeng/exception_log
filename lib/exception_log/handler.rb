@@ -22,10 +22,10 @@ module ExceptionLog
 				"user: #{user.try(:id)} #{user.try(:name)}"
 			end
 			error =<<HERE
-========================================= EXCEPTION ==============================================================			
+\n\n\n========================================= EXCEPTION ==============================================================			
 #{org_str}
 #{user_str}
-time: time: #{Time.now.strftime('%Y-%m-%d %H:%M:%S')}
+time: #{Time.now.strftime('%Y-%m-%d %H:%M:%S')}
 method: #{@request.method}
 url: #{@request.url}
 user-agent: #{@request.user_agent}
@@ -44,7 +44,7 @@ HERE
 
 		def write_file
 			log_path = @options[:log_path] || default_log_path
-			File.open(log_path,"w+") do |f|
+			File.open(log_path,"a+") do |f|
 				f.puts @body
 			end
 		end
