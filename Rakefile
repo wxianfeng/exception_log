@@ -1,5 +1,6 @@
 #!/usr/bin/env rake
 $:.push File.expand_path("../lib", __FILE__)
+require 'exception_log'
 
 begin
   require 'bundler/setup'
