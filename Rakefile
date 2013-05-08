@@ -1,6 +1,7 @@
 #!/usr/bin/env rake
 $:.push File.expand_path("../lib", __FILE__)
 require 'exception_log'
+# require 'action_mailer'
 
 begin
   require 'bundler/setup'

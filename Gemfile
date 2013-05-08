@@ -1,0 +1,1 @@
+gem "actionmailer", "~> 3.2.2"

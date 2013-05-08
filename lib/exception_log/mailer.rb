@@ -1,6 +1,6 @@
 #encoding:utf-8
 module ExceptionLog
-	class Mailer < ActionMailer::Base
+	class Mailer < ::ActionMailer::Base
 
 		def exception_mail(body,options = {})
 			from = options[:from]
