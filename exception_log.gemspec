@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ["wang.fl1429@gmail.com"]
   s.homepage    = "http://github.com/wxianfeng/exception_log"
   s.summary     = "rails exception send to email, and watch in web ui interface"
-  s.description = ""
+  s.description = "rails exception send to email, and watch in web ui interface"
 
   s.required_rubygems_version = ">= 1.3.6"
   # s.add_development_dependency("rspec")
