@@ -15,5 +15,5 @@ send rails exception to email and give web ui to watch exception, and it's live 
   
   config/environments/production.rb 
 
-    config.middleware.use ExceptionLog::Middleware, :from => 'noreply@entfield.com', :to => ['foo@xx.com','bar@xx.com']
+    config.middleware.use ExceptionLog::Middleware, :from => 'noreply@xx.com', :to => ['foo@xx.com','bar@xx.com']
   
