@@ -11,7 +11,7 @@ send rails exception to email and give web ui to watch exception, and it's live 
 
   Gemfile
 
-    gem 'exception_log', '0.1.0', require: 'exception_log'
+    gem 'exception_log', '0.2.0', require: 'exception_log'
   
   config/environments/production.rb 
 
