@@ -30,7 +30,7 @@ method: #{@request.method}
 url: #{@request.url}
 user-agent: #{@request.user_agent}
 referer: #{@request.headers["Referer"]}
-params: #{@controller.params}
+params: #{@controller.params if @controller.respond_to? :params}
 exception: #{@exception.class}
 message: #{@exception.message}
 backtace: \n#{@exception.backtrace.join("\n")}
