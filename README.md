@@ -16,4 +16,19 @@ send rails exception to email and give web ui to watch exception, and it's live 
   config/environments/production.rb 
 
     config.middleware.use ExceptionLog::Middleware, :from => 'noreply@xx.com', :to => ['foo@xx.com','bar@xx.com']
+
+    options:
+
+      :log_path 500 error write to file path, default is Rails.root/log/exception.log
+
+  config/exception_log.yml
+
+    host: "192.168.9.35"
+    log: "/data/projects/entos/log/exception.log"
+
+## rake task, start nodejs server to tail log file in web ui interface
+
+  rake exception_log:start_node_server
+
+That's ALL, open http://localhost:1337 to watch live stream log.
   
